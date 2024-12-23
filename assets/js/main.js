@@ -162,24 +162,24 @@ jQuery(document).ready(function($) {
     });
 
 
-    var play_btn =  $('#play-video');
-    var play_btn_overlay =  $('#video-overlay');
-    var play_btn_overlay_close =  $('.video-overlay, .video-overlay-close');
-    var play_btn_overlay_open =  $('.video-overlay.open');
-    play_btn.on('click', function(e){
-      e.preventDefault();
-      play_btn_overlay.addClass('open');
+    // var play_btn =  $('#play-video');
+    // var play_btn_overlay =  $('#video-overlay');
+    // var play_btn_overlay_close =  $('.video-overlay, .video-overlay-close');
+    // var play_btn_overlay_open =  $('.video-overlay.open');
+    // play_btn.on('click', function(e){
+    //   e.preventDefault();
+    //   play_btn_overlay.addClass('open');
       
-    });
-    play_btn_overlay_close.on('click', function(e){
-      e.preventDefault();
-      close_video();
-    });
+    // });
+    // play_btn_overlay_close.on('click', function(e){
+    //   e.preventDefault();
+    //   close_video();
+    // });
 
 
 
-    //modal video button active
-    play_btn.modalVideo();
+    // //modal video button active
+    // play_btn.modalVideo();
 
     //wow animations active here
     new WOW().init();

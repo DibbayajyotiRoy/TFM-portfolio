@@ -23,6 +23,33 @@
 		<link rel="stylesheet" href="assets/css/button.css" />
 		<link rel="stylesheet" href="assets/css/inner.css" />
 		<link rel="stylesheet" href="assets/css/responsive.css" />
+		<style>
+			.about-img-section1 {
+				position: relative;
+				overflow: hidden; /* Ensure any overflow outside the container is hidden */
+			}
+
+			.about-img-section1 video {
+				width: 100%; /* Allow precise positioning */ /* Maintain aspect ratio */
+				height: 100%;
+				object-fit: cover; /* Ensure the video fills the container */
+			}
+
+			.video-play-button {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-size: 48px;
+				color: #00ff00; /* Green color */
+				cursor: pointer;
+				z-index: 2;
+			}
+
+			.video-play-button.hidden {
+				display: none; /* Hide the button */
+			}
+		</style>
 	</head>
 	<!--HEAD END-->
 
@@ -239,6 +266,12 @@
 									></a>
 									<div id="video-overlay" class="video-overlay">
 										<a class="video-overlay-close"></a>
+										<video id="about-video" width="100%" loop>
+											<source
+												src="./assets/img/logo/about.mp4"
+												type="video/mp4" />
+											Your browser does not support the video tag.
+										</video>
 									</div>
 								</div>
 							</div>
@@ -1084,6 +1117,55 @@
 		<script src="assets/js/plugins/jquery.hoverdir.js"></script>
 		<script src="assets/js/plugins/isotop.v3.0.4.min.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			document
+				.getElementById("play-video")
+				.addEventListener("click", function (e) {
+					e.preventDefault();
+					const videoOverlay = document.getElementById("video-overlay");
+					const video = document.getElementById("about-video");
+					videoOverlay.style.display = "flex"; // Show the overlay
+					video.play(); // Start playing the video
+				});
+
+			document
+				.querySelector(".video-overlay-close")
+				.addEventListener("click", function (e) {
+					e.preventDefault();
+					const videoOverlay = document.getElementById("video-overlay");
+					const video = document.getElementById("about-video");
+					video.pause(); // Pause the video
+					video.currentTime = 0; // Reset the video
+					videoOverlay.style.display = "none"; // Hide the overlay
+				});
+
+			// Play video automatically when in view
+			const video = document.getElementById("about-video");
+			const playButton = document.getElementById("play-video");
+
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							video.play(); // Play video
+							playButton.classList.add("hidden"); // Hide the play button
+						} else {
+							video.pause(); // Pause video when out of view
+						}
+					});
+				},
+				{ threshold: 0.5 } // Trigger when 50% of the video is visible
+			);
+
+			observer.observe(video);
+
+			// Optional: Handle click on the play button if needed
+			playButton.addEventListener("click", (e) => {
+				e.preventDefault();
+				video.play();
+				playButton.classList.add("hidden");
+			});
+		</script>
 	</body>
 	<!--body end-->
 </html>
