@@ -48,7 +48,7 @@ FOOTER AREA CSS
 ==========================
 */
 
-.header-banner-area {
+/* .header-banner-area {
 	background: #2e3d44;
 	position: relative;
 	z-index: 2;
@@ -182,7 +182,7 @@ a.contact-btn:hover {
 	text-transform: uppercase;
 	font-weight: 400;
 	margin: 0;
-}
+} */
 
 /*
 ==========================
@@ -362,11 +362,19 @@ a.contact-btn:hover {
 }
 
 .single-welcome-area {
+	height: 400px;
 	position: relative;
 	z-index: 2;
-	height: 500px;
-	display: flex;
+	/* display: flex; */
 	align-items: center;
+}
+.brand{
+	margin-top: 90px;
+}
+.brandName{
+	padding-bottom: 40px;
+	font-family: "Syne Mono", serif;
+  	font-weight: 100;
 }
 
 .wlc-title h1 {
@@ -374,8 +382,9 @@ a.contact-btn:hover {
 	font-size: 60px;
 	line-height: 80px;
 	margin-bottom: 25px;
-	margin-top: 15px;
+	margin-top: 5px;
 }
+
 .col-lg-7 {
 	margin-top: 5px;
 }
@@ -411,6 +420,7 @@ a.contact-btn:hover {
 	bottom: 50%;
 	right: 5%;
 	margin-bottom: -30px;
+	height: 100px;
 }
 
 .welcome-carousel .owl-dots > div {
@@ -524,7 +534,7 @@ a.about-video {
 	width: 300px;
 	background: url(../img/about/about-shape.svg) no-repeat;
 	background-repeat: no-repeat;
-	bottom: -20%;
+	bottom: 21%;
 	left: -15%;
 	z-index: -1;
 }
@@ -1468,6 +1478,10 @@ a.readmore-btn {
 
 .single-blog:hover .blog-description a {
 	color: #22cd6f;
+}
+
+.p-blog{
+	font-size: large;
 }
 /*
 ==========================
