@@ -368,13 +368,13 @@ a.contact-btn:hover {
 	/* display: flex; */
 	align-items: center;
 }
-.brand{
+.brand {
 	margin-top: 90px;
 }
-.brandName{
+.brandName {
 	padding-bottom: 40px;
 	font-family: "Syne Mono", serif;
-  	font-weight: 100;
+	font-weight: 100;
 }
 
 .wlc-title h1 {
@@ -1480,7 +1480,7 @@ a.readmore-btn {
 	color: #22cd6f;
 }
 
-.p-blog{
+.p-blog {
 	font-size: large;
 }
 /*
@@ -1785,7 +1785,7 @@ span.single-social-icon i {
 	font-size: 48px;
 	line-height: 62px;
 	text-transform: uppercase;
-	color: #0b0d0e;
+	color: #f1f1f1;
 	font-weight: 600;
 	margin-bottom: 0;
 }
@@ -1803,7 +1803,7 @@ span.single-social-icon i {
 	font-size: 80px;
 	font-family: "Oswald", sans-serif;
 	text-transform: uppercase;
-	-webkit-text-fill-color: #f1f1f1;
+	-webkit-text-fill-color: #757373;
 	position: absolute;
 	left: 0;
 	top: 0;
