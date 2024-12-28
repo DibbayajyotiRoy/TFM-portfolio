@@ -265,20 +265,47 @@
 							</div>
 							<div class="space-20"></div>
 							<div class="contact-form">
-								<form action="#">
-									<input type="text" placeholder="Name" />
-									<input type="email" placeholder="Email" />
+								<form action="https://api.web3forms.com/submit" method="POST">
+									<input
+										type="hidden"
+										name="access_key"
+										value="0b5bdc75-53be-41ce-9f0a-817f650c83c4" />
+									<input
+										type="text"
+										name="name"
+										placeholder="Write your name" />
+									<input
+										type="email"
+										name="email"
+										placeholder="Provide your email" />
+									<input
+										type="number"
+										name="Whatsapp"
+										min="0"
+										placeholder="Provide the contact (e.g. Whatsapp)" />
+									<input
+										type="text"
+										name="service need"
+										placeholder="Which service do you need from us?" />
+									<input
+										type="text"
+										name="profession"
+										placeholder="What type of business do you have?" />
+									<input
+										type="text"
+										name="social media link"
+										placeholder="Attach the social media link (if any)" />
 									<textarea
-										name="messege"
+										name="message"
 										id="messege"
 										cols="30"
 										rows="3"
 										placeholder="Message"></textarea>
+									<div class="space-20"></div>
+									<button class="subscribe-btn" type="submit">
+										sent now <i class="fal fa-comments-alt"></i>
+									</button>
 								</form>
-								<div class="space-20"></div>
-								<a href="#" class="subscribe-btn"
-									>sent now <i class="fal fa-comments-alt"></i
-								></a>
 							</div>
 						</div>
 					</div>
@@ -473,9 +500,9 @@
 							<div class="cta-form">
 								<form action="#">
 									<input type="email" placeholder="Enter Your Email.." />
-									<a href="#" class="subscribe-btn"
-										>subscribe <i class="fal fa-comments-alt"></i
-									></a>
+									<button class="subscribe-btn">
+										subscribe <i class="fal fa-comments-alt"></i>
+									</button>
 								</form>
 							</div>
 						</div>
