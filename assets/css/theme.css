@@ -192,6 +192,16 @@ a.contact-btn:hover {
 .header-area {
 	border-bottom: 1px solid #15181a;
 }
+.header-area.sticky {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+	background: #000;
+	transition: all 1s;
+}
+
 .img {
 	height: 60px;
 	width: 60px;
@@ -375,6 +385,7 @@ a.contact-btn:hover {
 	padding-bottom: 40px;
 	font-family: "Syne Mono", serif;
 	font-weight: 100;
+	white-space: nowrap;
 }
 
 .wlc-title h1 {
